@@ -1,19 +1,22 @@
 <template>
-  <NavLinks />
+  <Header />
   <router-view />
 </template>
 
 <script>
-import NavLinks from "@/components/NavLinks.vue";
+import Header from "@/components/Header.vue";
 
 export default {
   components: {
-    NavLinks,
+    Header,
   },
 };
 </script>
 
 <style>
+@import "./assets/styles/colors.css";
+@import "./assets/styles/fonts.css";
+
 body {
   padding: 0;
   margin: 0;
