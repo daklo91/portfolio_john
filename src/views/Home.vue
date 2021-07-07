@@ -69,14 +69,18 @@
   <div class="fw-container">
     <div class="fw-card">
       <p class="section-title">Featured works</p>
-      <img
-        class="fw-image"
-        src="../assets/featured_work_1.png"
-        alt="Thumbnail of Designing Dashboards"
-      />
+      <div class="fw-image-crop">
+        <img
+          class="fw-image"
+          src="../assets/featured_work_1.png"
+          alt="Thumbnail of Designing Dashboards"
+        />
+      </div>
       <h3 class="fw-title">Designing Dashboards</h3>
-      <p class="fw-date">2020</p>
-      <p class="fw-type">Dashboard</p>
+      <div class="fw-intro">
+        <p class="fw-date">2020</p>
+        <p class="fw-type">Dashboard</p>
+      </div>
       <p class="fw-description">
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -130,7 +134,7 @@ export default {
 }
 
 .intro-cta {
-  width: 210px;
+  max-width: 210px;
   height: 50px;
   margin-top: 30px;
   background-color: var(--primary);
@@ -200,17 +204,24 @@ export default {
   font-weight: 500;
   font: 1em;
   margin: 0 15px 20px 15px;
+  padding-bottom: 20px;
 }
 
 .fw-container {
+  margin-bottom: 50px;
 }
 
 .fw-card {
-  padding: 15px;
+  margin: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fw-image-crop {
 }
 
 .fw-image {
-  width: 340px;
+  width: 100%;
+  height: auto;
   border-radius: 4px;
   object-fit: cover;
   margin: auto;
@@ -225,8 +236,12 @@ export default {
   color: var(--dark);
 }
 
+.fw-intro {
+  display: flex;
+}
+
 .fw-date {
-  background-color: #142850;
+  background-color: var(--dark-blue);
   font-weight: 900;
   color: #fff;
   width: 60px;
@@ -238,5 +253,7 @@ export default {
 .fw-type {
   font-weight: 500;
   font-size: 1em;
+  color: var(--light);
+  margin-left: 20px;
 }
 </style>
