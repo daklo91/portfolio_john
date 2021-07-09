@@ -65,7 +65,7 @@
       </p>
     </div>
   </div>
-
+  <!-- "fw" short for Featured Works -->
   <div class="fw-container">
     <div class="fw-card">
       <p class="section-title">Featured works</p>
@@ -134,7 +134,7 @@ export default {
 }
 
 .intro-cta {
-  max-width: 210px;
+  width: 210px;
   height: 50px;
   margin-top: 30px;
   background-color: var(--primary);
@@ -212,7 +212,7 @@ export default {
 }
 
 .fw-card {
-  margin: 15px;
+  margin: 0 15px 15px 15px;
   border-bottom: 1px solid #e0e0e0;
 }
 
