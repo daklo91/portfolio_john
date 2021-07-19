@@ -15,4 +15,17 @@ export default {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec commodo elit. Integer ac metus sed felis iaculis tempor quis a erat. Nulla fringilla non ligula sollicitudin porta.",
     },
   ],
+  workPosts: [
+    {
+      image: [
+        { imageName: "dashboard_image.png" },
+        { alt: "Thumbnail of Designing Dashboards" },
+      ],
+      title: "Designing Dashboards",
+      date: "2020",
+      types: ["Dashboard"],
+      description:
+        "Cras justo erat, ornare accumsan blandit ac, volutpat at turpis. Morbi facilisis nisl ornare dui accumsan sagittis sed vel mi.",
+    },
+  ],
 };
