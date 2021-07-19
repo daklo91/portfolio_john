@@ -59,9 +59,6 @@ export default {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.fw-image-crop {
-}
-
 .fw-image {
   width: 100%;
   height: auto;
