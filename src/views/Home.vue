@@ -27,43 +27,33 @@
       />
     </div>
   </div>
-  <!-- "fw" short for Featured Works -->
   <div class="fw-container">
-    <div class="fw-card">
-      <p class="section-title">Featured works</p>
-      <div class="fw-image-crop">
-        <img
-          class="fw-image"
-          src="../assets/featured_work_1.png"
-          alt="Thumbnail of Designing Dashboards"
-        />
-      </div>
-      <h3 class="fw-title">Designing Dashboards</h3>
-      <div class="fw-intro">
-        <p class="fw-date">2020</p>
-        <p class="fw-type">Dashboard</p>
-      </div>
-      <p class="fw-description">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-    </div>
+    <p class="section-title">Featured works</p>
+    <WorkCard
+      :image="workPosts[0].image"
+      :title="workPosts[0].title"
+      :date="workPosts[0].date"
+      :types="workPosts[0].types"
+      :description="workPosts[0].description"
+    />
   </div>
 </template>
 
 <script>
 import BlogPostCard from "@/components/BlogPostCard.vue";
+import WorkCard from "@/components/WorkCard.vue";
 import store from "@/assets/data/store.js";
 
 export default {
   name: "Home",
   components: {
     BlogPostCard,
+    WorkCard,
   },
   data() {
     return {
       blogPosts: store.blogPosts,
+      workPosts: store.workPosts,
     };
   },
 };
@@ -134,99 +124,12 @@ export default {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   margin: 0;
 }
 
-/* .rp-card {
-  background-color: #fff;
-  margin: 0 10px 0 10px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
-  box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
-}
-
-.rp-title {
-  font-weight: 700;
-  font-size: 22px;
-  padding: 15px 15px 0 15px;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: var(--dark);
-}
-
-.rp-info {
-  display: flex;
-  align-content: center;
-  padding: 0 15px 0 15px;
-}
-
-.rp-date,
-.rp-type {
-  font-weight: 500;
-  font: 1em;
-}
-
-.rp-divider {
-  align-self: center;
-  margin: 0 25px 0 25px;
-}
-
-.rp-description {
-  font-weight: 500;
-  font: 1em;
-  margin: 0 15px 20px 15px;
-  padding-bottom: 20px;
-} */
-
 .fw-container {
   margin-bottom: 50px;
-}
-
-.fw-card {
-  margin: 0 15px 15px 15px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.fw-image-crop {
-}
-
-.fw-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-  margin: auto;
-  display: block;
-}
-
-.fw-title {
-  font-weight: 700;
-  font-size: 22px;
-  margin-bottom: 0;
-  margin-top: 15px;
-  color: var(--dark);
-}
-
-.fw-intro {
-  display: flex;
-}
-
-.fw-date {
-  background-color: var(--dark-blue);
-  font-weight: 900;
-  color: #fff;
-  width: 60px;
-  text-align: center;
-  border-radius: 1em;
-  padding-top: 1px;
-}
-
-.fw-type {
-  font-weight: 500;
-  font-size: 1em;
-  color: var(--light);
-  margin-left: 20px;
 }
 </style>
