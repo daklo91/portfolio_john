@@ -16,53 +16,15 @@
     </p>
     <button class="intro-cta">Download Resume</button>
   </div>
-  <!-- "rp" short for Recent Posts -->
   <div class="rp-container">
     <h2 class="section-title">Recent Posts</h2>
-    <div class="rp-card">
-      <h3 class="rp-title">Making a design system from scratch</h3>
-      <div class="rp-info">
-        <p class="rp-date">12 Feb 2020</p>
-        <svg
-          width="2"
-          height="21"
-          viewBox="0 0 2 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="rp-divider"
-        >
-          <path d="M1 0V21" stroke="black" />
-        </svg>
-        <p class="rp-type">Design, Pattern</p>
-      </div>
-      <p class="rp-description">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-    </div>
-
-    <div class="rp-card">
-      <h3 class="rp-title">Creating pixel perfect icons in Figma</h3>
-      <div class="rp-info">
-        <p class="rp-date">12 Feb 2020</p>
-        <svg
-          width="2"
-          height="21"
-          viewBox="0 0 2 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="rp-divider"
-        >
-          <path d="M1 0V21" stroke="black" />
-        </svg>
-        <p class="rp-type">Design, Pattern</p>
-      </div>
-      <p class="rp-description">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
+    <div v-for="index in 2" :key="index">
+      <BlogPostCard
+        :title="blogPosts[index - 1].title"
+        :date="blogPosts[index - 1].date"
+        :types="blogPosts[index - 1].type"
+        :description="blogPosts[index - 1].description"
+      />
     </div>
   </div>
   <!-- "fw" short for Featured Works -->
@@ -91,8 +53,19 @@
 </template>
 
 <script>
+import BlogPostCard from "@/components/BlogPostCard.vue";
+import store from "@/assets/data/store.js";
+
 export default {
   name: "Home",
+  components: {
+    BlogPostCard,
+  },
+  data() {
+    return {
+      blogPosts: store.blogPosts,
+    };
+  },
 };
 </script>
 
@@ -166,7 +139,7 @@ export default {
   margin: 0;
 }
 
-.rp-card {
+/* .rp-card {
   background-color: #fff;
   margin: 0 10px 0 10px;
   border-radius: 4px;
@@ -205,7 +178,7 @@ export default {
   font: 1em;
   margin: 0 15px 20px 15px;
   padding-bottom: 20px;
-}
+} */
 
 .fw-container {
   margin-bottom: 50px;
