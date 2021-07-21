@@ -108,6 +108,7 @@ export default {
 
 .intro-cta:hover {
   filter: brightness(115%);
+  cursor: pointer;
 }
 
 .intro-cta:active {

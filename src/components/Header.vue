@@ -55,6 +55,12 @@ export default {
   right: 20px;
   top: 20px;
   z-index: 10;
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  filter: brightness(200%);
+  transform: skewY(5deg);
 }
 
 .nav-links-big-screen {
@@ -69,8 +75,12 @@ export default {
 .router-link {
   font-size: 20px;
   font-weight: 500;
-  color: black;
+  color: black; /* it's black in the design file */
   text-decoration: none;
+}
+
+.router-link:hover {
+  transform: skewY(5deg);
 }
 
 .router-link-active {
