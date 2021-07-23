@@ -22,13 +22,15 @@
     <div class="rp-container">
       <h2 class="section-title">Recent Posts</h2>
       <router-link class="view-work-link" to="/work">View all</router-link>
-      <div v-for="index in 2" :key="index">
-        <BlogPostCard
-          :title="blogPosts[index - 1].title"
-          :date="blogPosts[index - 1].date"
-          :types="blogPosts[index - 1].type"
-          :description="blogPosts[index - 1].description"
-        />
+      <div class="blog-post-card-container">
+        <div v-for="index in 2" :key="index">
+          <BlogPostCard
+            :title="blogPosts[index - 1].title"
+            :date="blogPosts[index - 1].date"
+            :types="blogPosts[index - 1].type"
+            :description="blogPosts[index - 1].description"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -208,7 +210,22 @@ export default {
     filter: brightness(130%);
   }
 
-  .rp-container {
+  .blog-post-card-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  ::v-deep(.rp-card) {
+    min-height: 285px;
+  }
+  ::v-deep(.rp-title) {
+    font-size: 26px;
+  }
+  ::v-deep(.rp-date) {
+    font-size: 18px;
+  }
+  ::v-deep(.rp-type) {
+    font-size: 18px;
   }
 }
 </style>
