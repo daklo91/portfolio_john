@@ -227,5 +227,33 @@ export default {
   ::v-deep(.rp-type) {
     font-size: 18px;
   }
+
+  ::v-deep(.fw-card) {
+    display: flex;
+  }
+  ::v-deep(.fw-image-crop) {
+    margin-bottom: 25px;
+  }
+  ::v-deep(.fw-info-container) {
+    min-width: 560px;
+    margin-left: 18px;
+  }
+  ::v-deep(.fw-title) {
+    font-size: 30px;
+    margin-top: -7px;
+  }
+  ::v-deep(.fw-date) {
+    font-size: 18px;
+    /* padding-top: 3px; */
+    height: 25px;
+  }
+  ::v-deep(.fw-type) {
+    font-size: 20px;
+    margin-top: 17px;
+  }
+  ::v-deep(.fw-description) {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
 }
 </style>
