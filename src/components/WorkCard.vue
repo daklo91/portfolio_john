@@ -7,18 +7,20 @@
         :alt="image[1].alt"
       />
     </div>
-    <h3 class="fw-title">{{ title }}</h3>
-    <div class="fw-intro">
-      <p class="fw-date">{{ date }}</p>
-      <div v-for="(type, index) in types" :key="index">
-        <p class="fw-type">
-          {{ type }}<span v-if="index + 1 < types.length">,&#160;</span>
-        </p>
+    <div class="fw-info-container">
+      <h3 class="fw-title">{{ title }}</h3>
+      <div class="fw-intro">
+        <p class="fw-date">{{ date }}</p>
+        <div v-for="(type, index) in types" :key="index">
+          <p class="fw-type">
+            {{ type }}<span v-if="index + 1 < types.length">,&#160;</span>
+          </p>
+        </div>
       </div>
+      <p class="fw-description">
+        {{ description }}
+      </p>
     </div>
-    <p class="fw-description">
-      {{ description }}
-    </p>
   </div>
 </template>
 
