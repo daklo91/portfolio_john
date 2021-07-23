@@ -21,6 +21,7 @@
   <div class="rp-background">
     <div class="rp-container">
       <h2 class="section-title">Recent Posts</h2>
+      <router-link class="view-work-link" to="/work">View all</router-link>
       <div v-for="index in 2" :key="index">
         <BlogPostCard
           :title="blogPosts[index - 1].title"
@@ -144,6 +145,10 @@ export default {
     width: 470px;
     margin: auto;
   }
+
+  .view-work-link {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 901px) {
@@ -186,6 +191,21 @@ export default {
     text-align: left;
     font-weight: 500;
     font-size: 22px;
+    margin-left: 10px;
+  }
+
+  .view-work-link {
+    float: right;
+    margin-top: -43px;
+    text-decoration: none;
+    color: var(--secondary);
+    margin-right: 10px;
+  }
+  .view-work-link:hover {
+    filter: brightness(115%);
+  }
+  .view-work-link:active {
+    filter: brightness(130%);
   }
 
   .rp-container {
