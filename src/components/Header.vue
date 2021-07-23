@@ -79,10 +79,6 @@ export default {
   text-decoration: none;
 }
 
-.router-link:hover {
-  transform: skewY(5deg);
-}
-
 .router-link-active {
   color: var(--primary);
 }
