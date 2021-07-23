@@ -1,24 +1,24 @@
 <template>
-  <div class="container">
-    <div class="landing-page">
-      <img
-        class="profile-image"
-        src="../assets/john_profile.png"
-        alt="Profile Picture of John Smith"
-      />
-      <div class="intro-container">
-        <h1 class="intro-headline">
-          Hi, I am John,<br />
-          Creative Technologist
-        </h1>
-        <p class="intro-description">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </p>
-        <button class="intro-cta">Download Resume</button>
-      </div>
+  <div class="landing-page">
+    <img
+      class="profile-image"
+      src="../assets/john_profile.png"
+      alt="Profile Picture of John Smith"
+    />
+    <div class="intro-container">
+      <h1 class="intro-headline">
+        Hi, I am John,<br />
+        Creative Technologist
+      </h1>
+      <p class="intro-description">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Exercitation
+        veniam consequat sunt nostrud amet.
+      </p>
+      <button class="intro-cta">Download Resume</button>
     </div>
+  </div>
+  <div class="rp-background">
     <div class="rp-container">
       <h2 class="section-title">Recent Posts</h2>
       <div v-for="index in 2" :key="index">
@@ -30,16 +30,16 @@
         />
       </div>
     </div>
-    <div class="fw-container">
-      <p class="section-title">Featured works</p>
-      <WorkCard
-        :image="workPosts[0].image"
-        :title="workPosts[0].title"
-        :date="workPosts[0].date"
-        :types="workPosts[0].types"
-        :description="workPosts[0].description"
-      />
-    </div>
+  </div>
+  <div class="fw-container">
+    <p class="section-title">Featured works</p>
+    <WorkCard
+      :image="workPosts[0].image"
+      :title="workPosts[0].title"
+      :date="workPosts[0].date"
+      :types="workPosts[0].types"
+      :description="workPosts[0].description"
+    />
   </div>
 </template>
 
@@ -110,7 +110,7 @@ export default {
   filter: brightness(130%);
 }
 
-.rp-container {
+.rp-background {
   background-color: var(--blue-bg);
   margin-top: 55px;
   padding-bottom: 20px;
@@ -138,14 +138,18 @@ export default {
     display: block;
   }
 
-  .container {
+  .fw-container,
+  .rp-container,
+  .landing-page {
     width: 470px;
     margin: auto;
   }
 }
 
 @media screen and (min-width: 901px) {
-  .container {
+  .fw-container,
+  .rp-container,
+  .landing-page {
     width: 850px;
     margin: auto;
   }
@@ -185,8 +189,6 @@ export default {
   }
 
   .rp-container {
-    width: 100vw;
-    margin-left: -0%;
   }
 }
 </style>
