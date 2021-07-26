@@ -20,6 +20,13 @@ export default {
 @import "./assets/styles/colors.css";
 @import "./assets/styles/fonts.css";
 
+::-moz-selection {
+  background: var(--primary);
+}
+::selection {
+  background: var(--primary);
+}
+
 body {
   padding: 0;
   margin: 0;
