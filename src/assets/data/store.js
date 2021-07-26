@@ -22,10 +22,32 @@ export default {
         { alt: "Thumbnail of Designing Dashboards" },
       ],
       title: "Designing Dashboards",
-      date: "2020",
+      date: "2021",
       types: ["Dashboard"],
       description:
         "Cras justo erat, ornare accumsan blandit ac, volutpat at turpis. Morbi facilisis nisl ornare dui accumsan sagittis sed vel mi.",
+    },
+    {
+      image: [
+        { imageName: "6f359e2db24fc4e08bfd61cf50427139.png" },
+        { alt: "Thumbnail of Vibrant Portraits" },
+      ],
+      title: "Vibrant Portraits of 2020",
+      date: "2020",
+      types: ["Illustration"],
+      description:
+        "Morbi bibendum ex ut pulvinar imperdiet. Integer rutrum cursus mauris vel fermentum. Nullam tempus augue ac volutpat tempor. Cras convallis tempus eros. Vivamus ac egestas orci. Nam in porta diam.",
+    },
+    {
+      image: [
+        { imageName: "a561b38768fbe6667854fc00641b25fb.png" },
+        { alt: "Thumbnail of Typography works" },
+      ],
+      title: "36 Days of Malayalam type",
+      date: "2018",
+      types: ["Typography"],
+      description:
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
     },
   ],
 };
