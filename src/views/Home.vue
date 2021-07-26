@@ -36,13 +36,15 @@
   </div>
   <div class="fw-container">
     <p class="section-title">Featured works</p>
-    <WorkCard
-      :image="workPosts[0].image"
-      :title="workPosts[0].title"
-      :date="workPosts[0].date"
-      :types="workPosts[0].types"
-      :description="workPosts[0].description"
-    />
+    <div v-for="index in 3" :key="index">
+      <WorkCard
+        :image="workPosts[index - 1].image"
+        :title="workPosts[index - 1].title"
+        :date="workPosts[index - 1].date"
+        :types="workPosts[index - 1].types"
+        :description="workPosts[index - 1].description"
+      />
+    </div>
   </div>
 </template>
 
@@ -116,7 +118,7 @@ export default {
 .rp-background {
   background-color: var(--blue-bg);
   margin-top: 55px;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 
 .section-title {
@@ -144,7 +146,7 @@ export default {
   .fw-container,
   .rp-container,
   .landing-page {
-    width: 470px;
+    max-width: 470px;
     margin: auto;
   }
 
@@ -186,6 +188,7 @@ export default {
     width: 243px;
     height: 243px;
     margin: auto;
+    margin-right: 0;
     display: block;
   }
 
@@ -193,7 +196,6 @@ export default {
     text-align: left;
     font-weight: 500;
     font-size: 22px;
-    margin-left: 10px;
   }
 
   .view-work-link {
@@ -201,7 +203,7 @@ export default {
     margin-top: -43px;
     text-decoration: none;
     color: var(--secondary);
-    margin-right: 10px;
+    margin-right: -5px;
   }
   .view-work-link:hover {
     filter: brightness(115%);
@@ -213,10 +215,12 @@ export default {
   .blog-post-card-container {
     display: flex;
     flex-direction: row;
+    margin-left: -10px;
   }
 
   ::v-deep(.rp-card) {
     min-height: 285px;
+    min-width: 418px;
   }
   ::v-deep(.rp-title) {
     font-size: 26px;
@@ -230,9 +234,13 @@ export default {
 
   ::v-deep(.fw-card) {
     display: flex;
+    margin-left: 0px;
   }
   ::v-deep(.fw-image-crop) {
     margin-bottom: 25px;
+  }
+  ::v-deep(.fw-image) {
+    height: 180px;
   }
   ::v-deep(.fw-info-container) {
     min-width: 560px;
@@ -244,7 +252,6 @@ export default {
   }
   ::v-deep(.fw-date) {
     font-size: 18px;
-    /* padding-top: 3px; */
     height: 25px;
   }
   ::v-deep(.fw-type) {
