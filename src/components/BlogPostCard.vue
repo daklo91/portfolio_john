@@ -13,10 +13,10 @@
       >
         <path d="M1 0V21" stroke="black" />
       </svg>
-      <div v-for="(type, index) in types" :key="index">
-        <p class="rp-type">
-          {{ type }}<span v-if="index + 1 < types.length">,&#160;</span>
-        </p>
+      <div class="rp-type">
+        <div v-for="(type, index) in types" :key="index">
+          <p>{{ type }}<span v-if="index + 1 < types.length">,&#160;</span></p>
+        </div>
       </div>
     </div>
     <p class="rp-description">
@@ -79,6 +79,21 @@ export default {
   font-weight: 500;
   font: 1em;
   text-transform: capitalize;
+}
+
+.rp-type {
+  display: flex;
+  margin: auto 0 auto 0;
+}
+
+@media screen and (max-width: 350px) {
+  .rp-type {
+    flex-direction: column;
+  }
+
+  .rp-type > div > p {
+    margin: 0;
+  }
 }
 
 .rp-divider {
