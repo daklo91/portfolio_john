@@ -4,8 +4,8 @@
       <router-link class="router-link" @click="closeMenu" to="/"
         >Home</router-link
       >
-      <router-link class="router-link" @click="closeMenu" to="/about"
-        >About</router-link
+      <router-link class="router-link" @click="closeMenu" to="/blog"
+        >Blog</router-link
       >
     </div>
     <menuButton @click="openMenu" class="menuButton" />
@@ -14,8 +14,8 @@
         <router-link class="router-link" @click="closeMenu" to="/"
           >Home</router-link
         >
-        <router-link class="router-link" @click="closeMenu" to="/about"
-          >About</router-link
+        <router-link class="router-link" @click="closeMenu" to="/blog"
+          >Blog</router-link
         >
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
 .router-link {
   font-size: 20px;
   font-weight: 500;
-  color: black; /* it's black in the design file */
+  color: var(--dark); /* it's black in the design file */
   text-decoration: none;
 }
 
