@@ -84,6 +84,9 @@ export default {
 .rp-type {
   display: flex;
   margin: auto 0 auto 0;
+  color: var(
+    --light
+  ); /* in the design file, this is dark on the front page and light on the blog page, but I went for light on both for consistency */
 }
 
 @media screen and (max-width: 350px) {
