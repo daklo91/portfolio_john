@@ -1,49 +1,51 @@
 <template>
-  <div class="landing-page">
-    <img
-      class="profile-image"
-      src="../assets/john_profile.png"
-      alt="Profile Picture of John Smith"
-    />
-    <div class="intro-container">
-      <h1 class="intro-headline">
-        Hi, I am John,<br />
-        Creative Technologist
-      </h1>
-      <p class="intro-description">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-      <button class="intro-cta">Download Resume</button>
+  <div>
+    <div class="landing-page">
+      <img
+        class="profile-image"
+        src="../assets/john_profile.png"
+        alt="Profile Picture of John Smith"
+      />
+      <div class="intro-container">
+        <h1 class="intro-headline">
+          Hi, I am John,<br />
+          Creative Technologist
+        </h1>
+        <p class="intro-description">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit. Exercitation
+          veniam consequat sunt nostrud amet.
+        </p>
+        <button class="intro-cta">Download Resume</button>
+      </div>
     </div>
-  </div>
-  <div class="rp-background">
-    <div class="rp-container">
-      <h2 class="section-title">Recent Posts</h2>
-      <router-link class="view-work-link" to="/work">View all</router-link>
-      <div class="blog-post-card-container">
-        <div v-for="index in 2" :key="index">
-          <BlogPostCard
-            :title="blogPosts[index - 1].title"
-            :date="blogPosts[index - 1].date"
-            :types="blogPosts[index - 1].type"
-            :description="blogPosts[index - 1].description"
-          />
+    <div class="rp-background">
+      <div class="rp-container">
+        <h2 class="section-title">Recent Posts</h2>
+        <router-link class="view-work-link" to="/blog">View all</router-link>
+        <div class="blog-post-card-container">
+          <div v-for="index in 2" :key="index">
+            <BlogPostCard
+              :title="blogPosts[index - 1].title"
+              :date="blogPosts[index - 1].date"
+              :types="blogPosts[index - 1].type"
+              :description="blogPosts[index - 1].description"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="fw-container">
-    <p class="section-title">Featured works</p>
-    <div v-for="index in 3" :key="index">
-      <WorkCard
-        :image="workPosts[index - 1].image"
-        :title="workPosts[index - 1].title"
-        :date="workPosts[index - 1].date"
-        :types="workPosts[index - 1].types"
-        :description="workPosts[index - 1].description"
-      />
+    <div class="fw-container">
+      <p class="section-title">Featured works</p>
+      <div v-for="index in 3" :key="index">
+        <WorkCard
+          :image="workPosts[index - 1].image"
+          :title="workPosts[index - 1].title"
+          :date="workPosts[index - 1].date"
+          :types="workPosts[index - 1].types"
+          :description="workPosts[index - 1].description"
+        />
+      </div>
     </div>
   </div>
 </template>

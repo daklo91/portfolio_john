@@ -1,6 +1,10 @@
 <template>
   <Header />
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <Footer />
 </template>
 
@@ -30,5 +34,21 @@ export default {
 body {
   padding: 0;
   margin: 0;
+}
+
+.fade-enter-from {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: all 0.15s ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-leave-active {
+  transition: all 0.15s ease-in;
 }
 </style>
