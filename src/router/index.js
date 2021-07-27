@@ -28,11 +28,15 @@ const routes = [
 ];
 
 const router = createRouter({
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 });
+      }, 150);
+    });
+  },
   history: createWebHashHistory(),
   routes,
-  scrollBehavior() {
-    return { left: 0, top: 0 };
-  },
 });
 
 export default router;
