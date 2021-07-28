@@ -1,5 +1,5 @@
 <template>
-  <div class="rp-card">
+  <div class="rp-card" @click="linkToBlog">
     <h3 class="rp-title">{{ title }}</h3>
     <div class="rp-info">
       <p class="rp-date">{{ date }}</p>
@@ -45,6 +45,14 @@ export default {
     description: {
       type: String,
       default: "empty",
+    },
+  },
+  methods: {
+    linkToBlog() {
+      this.$router.push({
+        name: "BlogPost",
+        params: { title: this.title.replace(/\s+/g, "-").toLowerCase() },
+      });
     },
   },
 };
