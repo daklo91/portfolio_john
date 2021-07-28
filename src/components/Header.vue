@@ -7,6 +7,9 @@
       <router-link class="router-link" @click="closeMenu" to="/blog"
         >Blog</router-link
       >
+      <router-link class="router-link" @click="closeMenu" to="/work"
+        >Work</router-link
+      >
     </div>
     <menuButton @click="openMenu" class="menuButton" />
     <div class="modal" v-if="menuOpen">
@@ -16,6 +19,9 @@
         >
         <router-link class="router-link" @click="closeMenu" to="/blog"
           >Blog</router-link
+        >
+        <router-link class="router-link" @click="closeMenu" to="/work"
+          >Work</router-link
         >
       </div>
     </div>
