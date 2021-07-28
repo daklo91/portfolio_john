@@ -254,7 +254,7 @@ export default {
   }
   ::v-deep(.fw-date) {
     font-size: 18px;
-    height: 25px;
+    height: 26px;
   }
   ::v-deep(.fw-type) {
     font-size: 20px;
