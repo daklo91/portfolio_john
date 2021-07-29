@@ -1,6 +1,6 @@
 <template>
-  <div class="rp-card" @click="linkToBlog">
-    <h3 class="rp-title">{{ title }}</h3>
+  <div class="rp-card">
+    <h3 class="rp-title" @click="linkToBlog">{{ title }}</h3>
     <div class="rp-info">
       <p class="rp-date">{{ date }}</p>
       <svg
@@ -74,6 +74,11 @@ export default {
   margin-bottom: 0;
   margin-top: 0;
   color: var(--dark);
+}
+
+.rp-title:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .rp-info {
