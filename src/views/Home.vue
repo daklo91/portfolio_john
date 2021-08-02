@@ -243,6 +243,7 @@ export default {
   }
   ::v-deep(.fw-image) {
     height: 180px;
+    width: 246px;
   }
   ::v-deep(.fw-info-container) {
     min-width: 560px;
