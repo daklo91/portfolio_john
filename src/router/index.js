@@ -4,6 +4,7 @@ import About from "../views/About.vue";
 import Work from "../views/Work.vue";
 import Blog from "../views/Blog.vue";
 import BlogPost from "../views/BlogPost.vue";
+import WorkPost from "../views/WorkPost.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/blog/:title",
     name: "BlogPost",
     component: BlogPost,
+  },
+  {
+    path: "/work/:title",
+    name: "WorkPost",
+    component: WorkPost,
   },
 ];
 

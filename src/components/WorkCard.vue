@@ -8,7 +8,7 @@
       />
     </div>
     <div class="fw-info-container">
-      <h3 class="fw-title">{{ title }}</h3>
+      <h3 class="fw-title" @click="linkToWork">{{ title }}</h3>
       <div class="fw-intro">
         <p class="fw-date">{{ date }}</p>
         <div v-for="(type, index) in types" :key="index">
@@ -52,6 +52,14 @@ export default {
       default: "empty",
     },
   },
+  methods: {
+    linkToWork() {
+      this.$router.push({
+        name: "WorkPost",
+        params: { title: this.title.replace(/\s+/g, "-").toLowerCase() },
+      });
+    },
+  },
 };
 </script>
 
@@ -76,6 +84,11 @@ export default {
   margin-bottom: 0;
   margin-top: 15px;
   color: var(--dark);
+}
+
+.fw-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .fw-intro {
