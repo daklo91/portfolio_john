@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .container {
-  padding: 0 18px 18px 18px;
+  padding: 18px;
   max-width: 470px;
   margin: auto;
 }
