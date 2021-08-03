@@ -12,6 +12,41 @@
         :alt="workPost.image[1].alt"
       />
     </div>
+    <!-- Static content below. This would be data from an API -->
+    <h2>Headline Lorem to the Ipsum</h2>
+    <h3>Subheadline lorem</h3>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat
+      architecto reprehenderit impedit vel repudiandae. Dolorum numquam
+      explicabo tempora maxime repellendus repellat nisi odio, magni dolorem
+      rerum, aliquid veritatis reiciendis amet dolores perspiciatis fuga eos
+      optio! Explicabo pariatur a quis laboriosam eaque ullam corporis quidem
+      debitis, voluptatum doloremque ducimus quam. Recusandae animi nostrum
+      expedita esse id iure maxime molestiae quasi dolorem, accusamus, nihil
+      assumenda voluptatum voluptatibus, harum atque hic quidem. Officia quo
+      velit nemo, quis animi error, aut incidunt quod necessitatibus officiis
+      ullam harum exercitationem deserunt magni facere, tenetur repudiandae
+      voluptates distinctio qui. Adipisci at eius veniam illum consequatur porro
+      ea?
+    </p>
+    <img
+      src="@/assets/884ac19526fd2491ea0b40e9bee97049.png"
+      alt="Picture of lore content"
+      class="content-image"
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+      reprehenderit. Dolore recusandae molestias quia facilis qui autem.
+      Consequatur amet quasi quam tempora deserunt dignissimos suscipit velit.
+      Natus quae expedita temporibus perspiciatis illum rem dolores beatae
+      obcaecati iure excepturi esse, itaque officiis voluptates est? Esse
+      voluptate cumque dignissimos et! Eligendi, commodi.
+    </p>
+    <img
+      src="@/assets/252f22ce390e5bad81de4a04a3446a45.png"
+      alt="Picture of lore content"
+      class="content-image"
+    />
   </div>
 </template>
 
@@ -56,8 +91,20 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: -15px;
+}
+
 .date-type-container {
   display: flex;
+  align-items: center;
 }
 
 .date {
@@ -81,5 +128,32 @@ h1 {
 
 img {
   width: 100%;
+}
+
+.content-image {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 901px) {
+  .container {
+    max-width: 650px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .type {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
 }
 </style>

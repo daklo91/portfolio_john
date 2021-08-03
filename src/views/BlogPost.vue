@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="blog-title">{{ blogPost.title }}</h1>
+    <h1>{{ blogPost.title }}</h1>
     <div class="blog-info">
       <p class="blog-date">{{ blogPost.date }}</p>
       <svg
@@ -24,6 +24,27 @@
     </div>
     <p class="blog-description">
       {{ blogPost.description }}
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vel quia
+      provident aperiam corporis molestias voluptas ab qui? Facilis explicabo
+      atque adipisci, sunt esse praesentium tenetur repellat consequatur illo?
+      Eum minima maxime atque iste delectus quis at dolor porro, laborum ipsa
+      alias voluptates voluptatibus commodi quas, placeat temporibus eveniet
+      reiciendis.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum,
+      delectus debitis illo assumenda a. Vel, ullam perferendis. Totam, nihil ab
+      blanditiis veritatis nam tempore?
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vel quia
+      provident aperiam corporis molestias voluptas ab qui? Facilis explicabo
+      atque adipisci, sunt esse praesentium tenetur repellat consequatur illo?
+      Eum minima maxime atque iste delectus quis at dolor porro, laborum ipsa
+      alias voluptates voluptatibus commodi quas, placeat temporibus eveniet
+      reiciendis.
     </p>
   </div>
 </template>
@@ -54,13 +75,15 @@ export default {
 <style scoped>
 .container {
   padding: 18px;
-  max-width: 600px;
+  max-width: 470px;
   margin: auto;
 }
 
-.blog-title {
-  margin-top: 50px;
-  margin-bottom: -10px;
+h1 {
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 30px;
+  margin-bottom: 0;
 }
 
 .blog-info {
@@ -83,10 +106,13 @@ export default {
   font-style: italic;
 }
 
-@media screen and (max-width: 470px) {
-  .blog-title {
-    margin-top: 50px;
-    margin-bottom: -10px;
+@media screen and (min-width: 901px) {
+  .container {
+    max-width: 650px;
+  }
+
+  h1 {
+    font-size: 34px;
   }
 }
 </style>
