@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1>{{ blogPost.title }}</h1>
     <div class="blog-info">
       <p class="blog-date">{{ blogPost.date }}</p>
@@ -25,6 +25,7 @@
     <p class="blog-description">
       {{ blogPost.description }}
     </p>
+    <!-- Static content below. This would be data from an API -->
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vel quia
       provident aperiam corporis molestias voluptas ab qui? Facilis explicabo
@@ -46,7 +47,7 @@
       alias voluptates voluptatibus commodi quas, placeat temporibus eveniet
       reiciendis.
     </p>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -59,13 +60,14 @@ export default {
       blogPost: "",
     };
   },
-  mounted() {
+  created() {
     for (var i = 0; i < this.blogPosts.length; i++) {
       if (
         this.$route.params.title ===
         this.blogPosts[i].title.replace(/\s+/g, "-").toLowerCase()
       ) {
         this.blogPost = this.blogPosts[i];
+        break;
       }
     }
   },

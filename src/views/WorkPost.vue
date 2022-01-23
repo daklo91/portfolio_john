@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1>{{ workPost.title }}</h1>
     <div class="date-type-container">
       <p class="date">{{ workPost.date }}</p>
@@ -47,7 +47,7 @@
       alt="Picture of lore content"
       class="content-image"
     />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -67,6 +67,7 @@ export default {
         this.workPosts[i].title.replace(/\s+/g, "-").toLowerCase()
       ) {
         this.workPost = this.workPosts[i];
+        break;
       }
     }
   },
