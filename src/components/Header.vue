@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-container">
+  <header class="nav-container">
     <div class="nav-links-big-screen">
       <router-link class="router-link" @click="closeMenu" to="/"
         >Home</router-link
@@ -25,7 +25,7 @@
         >
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -81,7 +81,7 @@ export default {
 .router-link {
   font-size: 20px;
   font-weight: 500;
-  color: var(--dark); /* it's black in the design file */
+  color: var(--dark);
   text-decoration: none;
 }
 
@@ -110,14 +110,16 @@ export default {
   margin: 10px auto 0 auto;
 }
 
-@media screen and (min-width: 481px) {
-  .modal,
-  .menuButton {
-    display: none;
-  }
+.menuButton {
+  display: none;
 }
 
 @media screen and (max-width: 480px) {
+  .modal,
+  .menuButton {
+    display: block;
+  }
+
   .nav-links-big-screen {
     display: none;
   }
