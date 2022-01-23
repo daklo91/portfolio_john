@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="landing-page">
+  <main>
+    <section class="landing-page">
       <img
         class="profile-image"
         src="../assets/john_profile.png"
@@ -18,8 +18,8 @@
         </p>
         <button class="intro-cta">Download Resume</button>
       </div>
-    </div>
-    <div class="rp-background">
+    </section>
+    <section class="rp-background">
       <div class="rp-container">
         <h2 class="section-title">Recent Posts</h2>
         <router-link class="view-work-link" to="/blog">View all</router-link>
@@ -34,8 +34,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="fw-container">
+    </section>
+    <section class="fw-container">
       <p class="section-title">Featured works</p>
       <div v-for="index in 3" :key="index">
         <WorkCard
@@ -46,8 +46,8 @@
           :description="workPosts[index - 1].description"
         />
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script>

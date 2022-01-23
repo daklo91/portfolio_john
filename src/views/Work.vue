@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1 class="work-h1">Work</h1>
     <div v-for="(workPost, index) in workPosts" :key="index">
       <WorkCard
@@ -10,7 +10,7 @@
         :description="workPosts[index].description"
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

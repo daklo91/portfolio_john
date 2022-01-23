@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <h1 class="blog-h1">Blog</h1>
     <div v-for="(blogPost, index) in blogPosts" :key="index">
       <BlogPostCard
@@ -9,7 +9,7 @@
         :description="blogPosts[index].description"
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
